@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <%- include('partials/head.ejs')-%>
+    <title>Document</title>
+ 
+</head>
+<body>
+    <%- include('partials/header.ejs')-%>
+    <div class="container">
+        <div class="main">
+            <div class="categories">
+                <h3>Жанры</h3>
+                <% genres.forEach(genre =>{ %>
+                    <a href="/<%=genre.key%>"><%= genre.name %></a>
+                <%  })  %>
+            </div>
+            <div class="main-content">
+                <h3>Профиль</h3>
+                <div class="profile">
+                    <div class="profile-img">
+                        <img src="/images/profile-user.jpg" alt="">
+                    </div>
+                    <div class="profile-info">
+                        <p><span>Полное имя:</span><%=user.full_name%></p>
+                        <p><span>E-mail:</span> <%=user.email%></p>
+                        <%
+                            if(loginUser._id == user.id){
+                        %>
+                            <a class="edit-btn">Редактировать профилль</a>
+                            <a href="/api/signout" class="logout-btn">Выход</a>
+                        <%
+                            }
+                        %>
+
+                    </div>
+                </div>
+                <h3>Сохраненные фильмы</h3>
+                <%
+                    if(user.toWatch.length > 0){
+                        user.toWatch.forEach(film =>{
+
+                %>
+                    <div class="main-card">
+                        <div class="card-left">
+                            <div class="film-img">
+                                <img src="<%= film.image%>" alt="">
+                            </div>
+                            <div class="film-info">
+                                <a href="/detail/<%=film._id%>"><%= film.titleRus%></a> 
+                                <a href="/detail/<%=film._id%>"><%= film.titleEng%>,<%= film.year%>,<%= film.time%> мин</a>
+                                <a href="/detail/<%=film._id%>"><%= film.country.name%> • <%= film.genre.name%></a>                   
+                                <button class="film-btn">
+                                    <img src="/images/icons/play.svg" alt="">
+                                    Смотреть
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card-right">
+                            <div class="film-rate">
+                                <p>7.3</p>
+                            </div>
+                            <button class="film-btn" onclick="deleteFromToWatch('<%=film._id%>')">
+                                <i class="fa-solid fa-bookmark"></i>
+                                 Сохранено
+                            </button>
+                        </div>
+
+                    </div>
+
+                <%
+                    })
+                  }
+                %>
+   
+
+            </div>
+        </div>
+    </div>
+    <%- include('partials/scripts.ejs')%>
+
+</body>
+</html>

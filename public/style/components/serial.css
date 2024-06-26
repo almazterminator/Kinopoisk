@@ -1,0 +1,39 @@
+.addSeriesBtn{
+    padding: 15px 20px;
+    border: none;
+    background: grey;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Graphik Kinopoisk LC Web SB Regular",sans-serif;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 40%;
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+.series{
+    width: 100%;
+    margin: 15px 0;
+}
+.series p{
+    font-size: 18px;
+    margin: 15px 0;
+    font-weight: 600;
+}
+.series input{
+    width: 100%;
+    padding: 14px 20px;
+    outline: none;
+    border: 1px solid rgba(31,31,31,.1);
+    border-radius: 7px;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+#urls{
+    width: 40%;
+}
+#urls .fieldset{
+    width: 100%;
+}

@@ -1,0 +1,146 @@
+.main{
+    padding:20px 40px 50px;
+    background-color: #fff;
+    min-height: 75vh;
+    display: flex;
+    justify-content: space-between;
+}
+.edit-main {
+    padding:20px 40px 50px;
+    background-color: #fff;
+    min-height: 75vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.edit-main h3{
+    display: flex;
+    justify-content: center ;
+    font-size: 30px;
+    font-weight: bold;
+}
+.categories{
+    width: 20%;
+    border-right: 1px solid rgba(31,31,31,.1);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    box-sizing: border-box;
+    padding-right: 30px;
+}
+.categories h3{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.categories a{
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    border-bottom: 2px solid transparent;
+}
+.categories a:hover{
+    border-bottom: 2px solid #f50;
+    transition: .3s;
+    box-sizing: border-box;
+
+}
+.main-content{
+    width: 75%;
+    padding: 15px 30px;
+    box-sizing: border-box;
+}
+.main-card{
+    display: flex;
+    justify-content: space-between;
+    
+    border-bottom:  1px solid rgba(31,31,31,.1);
+    padding: 20px;
+}
+.main-content h3{
+    font-size: 24px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.card-left{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+.film-img{
+    width: 20%;
+
+}
+.film-img img{
+    width: 100%;
+}
+.film-info{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.film-info a{
+    margin: 5px 0px;
+
+    text-decoration: none;
+    color: #000;
+}
+.film-info a:first-child{
+    font-size: 18px;
+    font-weight: 600;
+}
+.film-info .film-btn{
+    background: linear-gradient(90deg,#ff5c4d,#eb469f 26.56%,#8341ef 75%,#3f68f9);
+    color: #fff;
+}
+.film-btn{
+    margin-top: 20px;
+    padding: 7px 20px;
+    display: flex;
+    align-items: center;
+    border: none;
+    font-weight: 600;
+
+    gap: 5px;
+    border-radius: 20px;
+    font-family: "Graphik Kinopoisk LC Web SB Regular",sans-serif;
+    cursor: pointer;
+}
+.film-btn img{
+    width: 18%;
+}
+.card-right{
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+    width: 35%;
+}
+.film-rate{
+    width: 15%;
+    padding-top: 8px;
+}
+.film-rate p{
+    font-size: 18px;
+    color: #3bb33b;
+}
+.card-right .film-btn{
+    width: auto;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+
+}
+
+.card-right .film-btn img{
+    width: 12%;
+}
+.main-card:hover{
+    background-color: #f7f7f7;
+    transition: .3s;
+}
